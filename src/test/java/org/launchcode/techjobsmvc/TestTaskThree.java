@@ -75,7 +75,8 @@ public class TestTaskThree {
         Parameter[] parameters = displaySearchResultsMethod.getParameters();
         assertEquals("searchType", parameters[1].getName());
         assertEquals("searchTerm", parameters[2].getName());
-    }
+    }}
+
 
     /*
      * Checks that displaySearchResults calls JobData.findAll when appropriate
@@ -96,18 +97,18 @@ public class TestTaskThree {
     /*
      * Checks that displaySearchResults calls JobData.findByColumnAndValue when appropriate
      * */
-//    @Test
-//    public void testDisplaySearchResultsCallsFindByColumnAndValue(@Mocked JobData jobData) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-//        Class searchControllerClass = Class.forName("org.launchcode.techjobsmvc.controllers.SearchController");
-//        Method displaySearchResultsMethod = searchControllerClass.getMethod("displaySearchResults", Model.class, String.class, String.class);
+   // @Test
+   //public void testDisplaySearchResultsCallsFindByColumnAndValue(@Mocked JobData jobData) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+      //  Class searchControllerClass = Class.forName("org.launchcode.techjobsmvc.controllers.SearchController");
+      //  Method displaySearchResultsMethod = searchControllerClass.getMethod("displaySearchResults", Model.class, String.class, String.class);
+
+       // new Expectations() {{
+        //    JobData.findByColumnAndValue("skill", "ruby");
+      //  }};
 //
-//        new Expectations() {{
-//            JobData.findByColumnAndValue("skill", "ruby");
-//        }};
-//
-//        Model model = new ExtendedModelMap();
-//        displaySearchResultsMethod.invoke(searchController, model, "skill", "ruby");
-//    }
+       // Model model = new ExtendedModelMap();
+       // displaySearchResultsMethod.invoke(searchController, model, "skill", "ruby");
+  //  }
 
     /*
      * Checks that displaySearchResults sets the necessary model attributes
@@ -120,7 +121,6 @@ public class TestTaskThree {
 //        displaySearchResultsMethod.invoke(searchController, model, "skill", "ruby");
 //        assertNotNull(model.getAttribute("jobs"));
 //        assertNotNull(model.getAttribute("columns"));
-//    }
 
-}
+
 
